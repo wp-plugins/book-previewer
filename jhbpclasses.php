@@ -806,7 +806,7 @@ class jhbookpreviewer
     
     public function jhbpcontainer($jhbpatts)
     {
-        $jhbpoutput = '<div id="jhbpreviewer" style="width:' . $this->jhbpsetwidth($jhbpatts) . 'px;height:' . $this->jhbpsetheight($jhbpatts) . 'px;"><div id="viewerCanvas" style="width:100%;height:100%;"></div></div>';
+        $jhbpoutput = '<div id="jhbpreviewer" style="width:' . $this->jhbpsetwidth($jhbpatts) . 'px;height:' . $this->jhbpsetheight($jhbpatts) . 'px;"><div id="viewerCanvas" style="width:100%;height:95%;"></div></div>';
         return $jhbpoutput;
     }
 

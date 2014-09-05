@@ -108,7 +108,7 @@ There are three options in Book Previewer’s WordPress Settings that can be use
 
 = 1.0.1 =
 
-Fixes a popup issue that causes unwanted scrolling on parent pages
+Fixes a popup issue that causes unwanted scrolling on parent pages and a lower margin issue with the embedded viewer.
 
 = 1.0 =
 
@@ -125,6 +125,7 @@ This is the first version of the plugin
 = 1.0.1 =
 
 * Fixed an issue with the popup button that could cause unwanted parent page scrolling.
+* Fixed a lower margin issue with the embedded viewer that could cause it to overlap with elements that follow it on a page.
 
 = 1.0 =
 
