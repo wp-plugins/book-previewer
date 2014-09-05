@@ -9,7 +9,7 @@ Author:            James R. Hanback, Jr.
 Donate link: 	   http://www.timetides.com
 Requires at least: 3.5 
 Tested up to:      4.0
-Stable tag:        1.0
+Stable tag:        1.0.1
 License:           GPLv3
 
 Retrieve and display Google Books previews for an ISBN, OCLC, LCCN, or GGKEY you specify on any WordPress page or post.
@@ -106,6 +106,10 @@ There are three options in Book Previewer’s WordPress Settings that can be use
 
 == Upgrade Notice ==
 
+= 1.0.1 =
+
+Fixes a popup issue that causes unwanted scrolling on parent pages and a lower margin issue with the embedded viewer.
+
 = 1.0 =
 
 This is the first version of the plugin
@@ -117,6 +121,11 @@ This is the first version of the plugin
 3. The plugin in action as a popup button
 
 == Changelog ==
+
+= 1.0.1 =
+
+* Fixed an issue with the popup button that could cause unwanted parent page scrolling.
+* Fixed a lower margin issue with the embedded viewer that could cause it to overlap with elements that follow it on a page.
 
 = 1.0 =
 
