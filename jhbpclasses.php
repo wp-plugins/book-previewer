@@ -806,7 +806,7 @@ class jhbookpreviewer
     
     public function jhbpcontainer($jhbpatts)
     {
-        $jhbpoutput = '<div id="jhbpreviewer" style="width:' . $this->jhbpsetwidth($jhbpatts) . 'px;height:' . $this->jhbpsetheight($jhbpatts) . 'px;"><div id="viewerCanvas" style="width:100%;height:100%;"></div></div>';
+        $jhbpoutput = '<div id="jhbpreviewer" style="width:' . $this->jhbpsetwidth($jhbpatts) . 'px;height:' . $this->jhbpsetheight($jhbpatts) . 'px;"><div id="viewerCanvas" style="width:100%;height:95%;"></div></div>';
         return $jhbpoutput;
     }
 
@@ -834,7 +834,7 @@ class jhbookpreviewer
                     } else {
                         $jhbpoutput .= $this->jhbppopup();
                     }
-                    $jhbpoutput .= '<a href="#" id="gbppop"><img src="' . $this->jhbpshowbutton($jhbpatts) . '" /></a>';
+                    $jhbpoutput .= '<a href="#" onClick="return false;" id="gbppop"><img src="' . $this->jhbpshowbutton($jhbpatts) . '" /></a>';
                     $jhbpoutput .= $this->jhbpcontainer($jhbpatts);
                     break;
             default:
