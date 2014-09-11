@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Book Previewer package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Book Previewer 1.0.0\n"
+"Project-Id-Version: Book Previewer 1.0.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/book-previewer\n"
-"POT-Creation-Date: 2014-09-03 23:45:02+00:00\n"
+"POT-Creation-Date: 2014-09-11 01:30:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,15 +48,15 @@ msgstr ""
 msgid "Language:"
 msgstr ""
 
-#: jhbpclasses.php:344
+#: jhbpclasses.php:345
 msgid "Settings"
 msgstr ""
 
-#: jhbpclasses.php:406
+#: jhbpclasses.php:419
 msgid "WARNING!"
 msgstr ""
 
-#: jhbpclasses.php:407
+#: jhbpclasses.php:420
 msgid ""
 "You should make a backup of your WordPress database before attempting to use "
 "the <strong>Clear Cache</strong> option. The <strong>Clear Cache</strong> "
@@ -65,43 +65,43 @@ msgid ""
 "caution."
 msgstr ""
 
-#: jhbpclasses.php:415
+#: jhbpclasses.php:428
 msgid "Shortcode"
 msgstr ""
 
-#: jhbpclasses.php:417
+#: jhbpclasses.php:430
 msgid ""
 "Insert the above shortcode into any page or post where you want Google Books "
 "previews to appear. Replace "
 msgstr ""
 
-#: jhbpclasses.php:418
+#: jhbpclasses.php:431
 msgid ""
 " with the product identifier to retrieve and display the preview for that "
 "product."
 msgstr ""
 
-#: jhbpclasses.php:419
+#: jhbpclasses.php:432
 msgid ""
 "For a more detailed and complete overview of how Book Previewer works, click "
 "the \"Help\" tab on the upper right of the Book Previewer settings page."
 msgstr ""
 
-#. #-#-#-#-#  plugin.pot (Book Previewer 1.0.0)  #-#-#-#-#
+#. #-#-#-#-#  plugin.pot (Book Previewer 1.0.2)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: jhbpclasses.php:468 jhbpclasses.php:597
+#: jhbpclasses.php:482 jhbpclasses.php:632
 msgid "Book Previewer"
 msgstr ""
 
-#: jhbpclasses.php:475
+#: jhbpclasses.php:489
 msgid "Usage"
 msgstr ""
 
-#: jhbpclasses.php:549
+#: jhbpclasses.php:573
 msgid "Allow Book Previewer"
 msgstr ""
 
-#: jhbpclasses.php:554
+#: jhbpclasses.php:578
 msgid ""
 "By selecting this checkbox, you agree to allow Book Previewer to display "
 "Google Books Previewer branding, previews, images, buttons, links, and text "
@@ -109,35 +109,44 @@ msgid ""
 "the Book Previewer plugin."
 msgstr ""
 
-#: jhbpclasses.php:560
+#: jhbpclasses.php:584
+msgid "Use Responsive Style"
+msgstr ""
+
+#: jhbpclasses.php:589
+msgid ""
+"Uses a responsive container for the previewer rather than a fixed width."
+msgstr ""
+
+#: jhbpclasses.php:595
 msgid "Cache Expires In"
 msgstr ""
 
-#: jhbpclasses.php:565
+#: jhbpclasses.php:600
 msgid ""
 "The number of hours that should pass before cached previewers expire. Cannot "
 "be more than 23 hours. Default is 12."
 msgstr ""
 
-#: jhbpclasses.php:571
+#: jhbpclasses.php:606
 msgid "Defer Until Footer"
 msgstr ""
 
-#: jhbpclasses.php:576
+#: jhbpclasses.php:611
 msgid ""
 "Loads Book Previewer data asynchronously for better site performance. See "
 "the Help menu for more information."
 msgstr ""
 
-#: jhbpclasses.php:582
+#: jhbpclasses.php:617
 msgid "Clear Cache"
 msgstr ""
 
-#: jhbpclasses.php:587
+#: jhbpclasses.php:622
 msgid "Clears Book Previewer transient data."
 msgstr ""
 
-#: jhbpclasses.php:599
+#: jhbpclasses.php:634
 msgid ""
 "Book Previewer is a shortcode that retrieves and displays Google Books "
 "previews of titles you specify. To use the shortcode, you must have an "
@@ -146,41 +155,41 @@ msgid ""
 "Generated Key (GGKEY) for the title you want to display."
 msgstr ""
 
-#: jhbpclasses.php:601
+#: jhbpclasses.php:636
 msgid "The Book Previewer shortcode requires the following two parameters:"
 msgstr ""
 
-#: jhbpclasses.php:603
+#: jhbpclasses.php:638
 msgid ""
 " the ISBN, OCLC, LCCN, or GGKEY of the title that has the Google Books "
 "preview you want to display."
 msgstr ""
 
-#: jhbpclasses.php:605
+#: jhbpclasses.php:640
 msgid ""
 " the type of preview you want to display. There are three options that "
 "correspond to the three types of Google Books preview elements: "
 "<code>embedded</code>, <code>link</code>, and <code>popup</code>."
 msgstr ""
 
-#: jhbpclasses.php:607
+#: jhbpclasses.php:642
 msgid ""
 "For example, the following shortcode displays a Google Preview button that, "
 "when clicked, will launch a popup Google Books preview of HOPPERS by Isaac "
 "Thorne:"
 msgstr ""
 
-#: jhbpclasses.php:612
+#: jhbpclasses.php:647
 msgid "Book Previewer Options"
 msgstr ""
 
-#: jhbpclasses.php:614
+#: jhbpclasses.php:649
 msgid ""
 "The Book Previewer shortcode supports all of the following optional "
 "parameters:"
 msgstr ""
 
-#: jhbpclasses.php:616
+#: jhbpclasses.php:651
 msgid ""
 " accepts a value of <code>ISBN</code>, <code>OCLC</code>, <code>LCCN</code>, "
 "or <code>GGKEY</code>. If you do not specify an <code>idtype</code>, Google "
@@ -188,21 +197,21 @@ msgid ""
 "the <code>bookid</code> value you entered."
 msgstr ""
 
-#: jhbpclasses.php:618
+#: jhbpclasses.php:653
 msgid ""
 " accepts an integer value in pixels to configure the width of the previewer. "
 "This parameter is only useful if <code>previewer</code> is configured to "
 "<code>embedded</code>."
 msgstr ""
 
-#: jhbpclasses.php:620
+#: jhbpclasses.php:655
 msgid ""
 " accepts an integer value in pixels to configure the height of the "
 "previewer. This parameter is only useful if <code>previewer</code> is "
 "configured to <code>embedded</code>."
 msgstr ""
 
-#: jhbpclasses.php:622
+#: jhbpclasses.php:657
 msgid ""
 " accepts a code to enable the Google Preview button to display text in a "
 "language other than English. The full list of codes is <a href=\"https://"
@@ -210,14 +219,14 @@ msgid ""
 "target=\"_blank\">available here</a>."
 msgstr ""
 
-#: jhbpclasses.php:624
+#: jhbpclasses.php:659
 msgid ""
 " accepts a string that identifies a publisher's Google Books cobrand. This "
 "parameter only works if you have established a cobrand with the Google Books "
 "partner program."
 msgstr ""
 
-#: jhbpclasses.php:626
+#: jhbpclasses.php:661
 msgid ""
 "The Book Previewer shortcode can be issued by typing the shortcode in the "
 "Text window of the editor on any page or post. The Text window also contains "
@@ -225,11 +234,11 @@ msgid ""
 "place the shortcode into the text frame."
 msgstr ""
 
-#: jhbpclasses.php:633
+#: jhbpclasses.php:668
 msgid "Book Previewer Settings"
 msgstr ""
 
-#: jhbpclasses.php:635
+#: jhbpclasses.php:670
 msgid ""
 "The Book Previewer plugin caches some information to your WordPress database "
 "if you do not have a caching plugin, such as W3 Total Cache, installed and "
@@ -237,20 +246,27 @@ msgid ""
 "on this page:"
 msgstr ""
 
-#: jhbpclasses.php:637
+#: jhbpclasses.php:672
 msgid ""
 " Configures the number of hours the WordPress database should store Book "
 "Previewer caches. Cannot be longer than 23 hours."
 msgstr ""
 
-#: jhbpclasses.php:639
+#: jhbpclasses.php:674
+msgid ""
+" Uses a variable-width container for the previewer instead of a fixed-width "
+"container, which can improve the appearance of the previewer on responsive "
+"sites."
+msgstr ""
+
+#: jhbpclasses.php:676
 msgid ""
 " Loads all Book Previewer JavaScript and <code>link</code> tags in your "
 "WordPress site's footer, which can benefit site performance. Your WordPress "
 "theme must use the wp_footer function for this option to work."
 msgstr ""
 
-#: jhbpclasses.php:641
+#: jhbpclasses.php:678
 msgid ""
 " If your site does not use a caching plugin, you can use this option to "
 "clear cached Book Previewer information from your WordPress database. Please "
@@ -260,23 +276,23 @@ msgid ""
 "cache feature."
 msgstr ""
 
-#: jhbpclasses.php:651
+#: jhbpclasses.php:688
 msgid "Cache cleared"
 msgstr ""
 
-#: jhbpclasses.php:686
+#: jhbpclasses.php:723
 msgid "Book Previewer Error"
 msgstr ""
 
-#: jhbpclasses.php:687
+#: jhbpclasses.php:724
 msgid " Previewer Type Not Recognized.<br><br>Valid entries are "
 msgstr ""
 
-#: jhbpclasses.php:689
+#: jhbpclasses.php:726
 msgid "or"
 msgstr ""
 
-#: jhbpclasses.php:787
+#: jhbpclasses.php:824
 msgid "Google Books Preview"
 msgstr ""
 
