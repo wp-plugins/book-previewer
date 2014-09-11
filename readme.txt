@@ -106,12 +106,13 @@ There are three options in Book Previewer’s WordPress Settings that can be use
 
 == Upgrade Notice ==
 
-= 1.0.1 =
+= 1.0.2 =
+Adds responsive setting to improve appearance of embedded previewer on responsive sites.
 
+= 1.0.1 =
 Fixes a popup issue that causes unwanted scrolling on parent pages and a lower margin issue with the embedded viewer.
 
 = 1.0 =
-
 This is the first version of the plugin
 
 == Screenshots ==
@@ -121,6 +122,10 @@ This is the first version of the plugin
 3. The plugin in action as a popup button
 
 == Changelog ==
+
+= 1.0.2 =
+
+* Added responsive setting to improve appearance of embedded previewer on responsive sites.
 
 = 1.0.1 =
 

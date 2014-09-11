@@ -228,6 +228,7 @@ class jhbookpreviewer
     public $jhbpclearcache  = 0;
     public $jhbpdefer       = 0;
     public $jhbpagree       = 1;
+    public $jhbpresponsive  = 0;
     public $jhbpatts        = array();
     public $jhbpidtypes     = array (
                               'ISBN',
@@ -401,6 +402,18 @@ class jhbookpreviewer
         return absint($this->jhbpdefer);
     }
     
+    public function setresponsive($newval)
+    {
+        $this->jhbpresponsive = (trim($newval)=='checked') ? 1 : trim($newval);
+        return absint($this->jhbpresponsive);
+    }
+    
+    public function getbpresponsive()
+    {
+        $this->jhbpresponsive = get_option('bookpreviewer-responsive','1');
+        return absint($this->jhbpresponsive);
+    }
+    
     public function jhbpoptionscallback()
     {
         $jhbp1      = __('WARNING!');
@@ -428,6 +441,7 @@ class jhbookpreviewer
         register_setting('bookpreviewer-options','bookpreviewer-perform',array(&$this, 'setcacheexpire'));
         register_setting('bookpreviewer-options','bookpreviewer-clearcache',array(&$this, 'setclearcache'));
         register_setting('bookpreviewer-options','bookpreviewer-defer',array(&$this, 'setdeferload'));
+        register_setting('bookpreviewer-options','bookpreviewer-responsive',array(&$this,'setresponsive'));
     }
     
     public function jhbpaddadminpage() 
@@ -505,6 +519,16 @@ class jhbookpreviewer
         $jhbpfield .= '<label for="bookpreviewer-agree"> '  . sanitize_text_field($args[0]) . '</label>';
         echo $jhbpfield;
     }
+    
+    public function jhbpcacheresponsivefield($args)
+    {
+        $jhbpfield  = '<input type="checkbox" name="bookpreviewer-responsive" id="bookpreviewer-responsive" value="1" /' .
+        checked(1, $this->getbpresponsive(), false) . 
+        $this->getbpresponsive() .
+        '><br />';
+        $jhbpfield .= '<label for="bookpreviewer-responsive"> '  . sanitize_text_field($args[0]) . '</label>';
+        echo $jhbpfield;
+    }
 
     public function jhbpcacheexpirefield($args)
     {
@@ -555,6 +579,17 @@ class jhbookpreviewer
             )
         );
         
+        add_settings_field(
+            'bookpreviewer-responsive',
+            __('Use Responsive Style','bookpreviewer'),
+            array(&$this, 'jhbpcacheresponsivefield'),
+            'bookpreviewer-options',
+            'bookpreviewer_retrieval_section',
+            array(
+                __('Uses a responsive container for the previewer rather than a fixed width.','bookpreviewer')
+            )
+        );
+
         add_settings_field(
             'bookpreviewer-perform',
             __('Cache Expires In','bookpreviewer'),
@@ -635,6 +670,8 @@ class jhbookpreviewer
                               __('The Book Previewer plugin caches some information to your WordPress database if you do not have a caching plugin, such as W3 Total Cache, installed and activated. You can alter the following Book Previewer performance settings on this page:','bookpreviewer') .
                               '<ul><li><code>Cache Expires In</code>' .
                               __(' Configures the number of hours the WordPress database should store Book Previewer caches. Cannot be longer than 23 hours.','bookpreviewer') .
+                              '</li><li><code>Use Responsive STyle</code>' .
+                              __(' Uses a variable-width container for the previewer instead of a fixed-width container, which can improve the appearance of the previewer on responsive sites.','bookpreviewer') .
                               '</li><li><code>Defer Until Footer</code>' .
                               __(' Loads all Book Previewer JavaScript and <code>link</code> tags in your WordPress site\'s footer, which can benefit site performance. Your WordPress theme must use the wp_footer function for this option to work.','bookpreviewer') .
                               '</li><li><code>Clear Cache</code>' .
@@ -806,7 +843,9 @@ class jhbookpreviewer
     
     public function jhbpcontainer($jhbpatts)
     {
-        $jhbpoutput = '<div id="jhbpreviewer" style="width:' . $this->jhbpsetwidth($jhbpatts) . 'px;height:' . $this->jhbpsetheight($jhbpatts) . 'px;"><div id="viewerCanvas" style="width:100%;height:95%;"></div></div>';
+        $jhbpoutput  = '<div id="jhbpreviewer" style="width:';
+        $jhbpoutput .= ($this->getbpresponsive()==0) ? $this->jhbpsetwidth($jhbpatts) . 'px' : '100%';
+        $jhbpoutput .= ';height:' . $this->jhbpsetheight($jhbpatts) . 'px;"><div id="viewerCanvas" style="width:100%;height:95%;"></div></div>';
         return $jhbpoutput;
     }
 
