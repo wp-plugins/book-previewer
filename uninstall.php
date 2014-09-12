@@ -39,6 +39,7 @@ delete_option('bookpreviewer-agree');
 delete_option('bookpreviewer-perform');
 delete_option('bookpreviewer-clearcache');
 delete_option('bookpreviewer-defer');
+delete_option('bookpreviewer-responsive');
 
 // Remove Book Previewer transients (if any)
 $dbquery = 'SELECT option_name FROM ' . $wpdb->options . ' WHERE option_name LIKE \'_transient_timeout_jhbpT-%\';';

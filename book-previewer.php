@@ -3,7 +3,7 @@
  * Plugin Name: Book Previewer
  * Plugin URI: http://www.timetides.com/book-previewer-plugin-wordpress
  * Description: Retrieves and displays Google Books previews for titles you choose in any WordPress page or post.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: James R. Hanback, Jr.
  * Author URI: http://www.timetides.com
  * License: GPL3

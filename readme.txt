@@ -7,7 +7,7 @@ Tags:              books,google,previewer,previews,sample,free,inside
 Author URI:        http://www.timetides.com
 Author:            James R. Hanback, Jr.
 Donate link: 	   http://www.timetides.com
-Requires at least: 3.5 
+Requires at least: 3.6
 Tested up to:      4.0
 Stable tag:        1.0.1
 License:           GPLv3
@@ -106,7 +106,7 @@ There are three options in Book Previewer’s WordPress Settings that can be use
 
 == Upgrade Notice ==
 
-= 1.0.2 =
+= 1.0.3 =
 Adds responsive setting to improve appearance of embedded previewer on responsive sites.
 
 = 1.0.1 =
@@ -123,9 +123,11 @@ This is the first version of the plugin
 
 == Changelog ==
 
-= 1.0.2 =
+= 1.0.3 =
 
 * Added responsive setting to improve appearance of embedded previewer on responsive sites.
+* Modified script loading so that scripts are loaded only on the home page or any page/post that contains the bookpreviewer shortcode.
+* Updated minimum WordPress version to 3.6.
 
 = 1.0.1 =
 

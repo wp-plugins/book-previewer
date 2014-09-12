@@ -299,17 +299,23 @@ class jhbookpreviewer
  
     public function jhbploadscripts()
     {   
-        $jhbpliburl = '//www.google.com/jsapi';
-        $bpscript = plugins_url('/js/book-previewer.js', __FILE__);
+        global $post;
+        // Load scripts/stylesheet if required and if shortcode is present
+        // below code does NOT work with do_shortcode and requires WP 3.6 or later
+        if(has_shortcode($post->post_content,'bookpreviewer') || is_home() || is_front_page() || is_active_widget( false, false, 'jhbp_widget', true ))
+        {
+            $jhbpliburl = '//www.google.com/jsapi';
+            $bpscript = plugins_url('/js/book-previewer.js', __FILE__);
         
-        wp_register_script('googlebookpreviewer',$jhbpliburl,false,false,$this->jhbploadinfooter());
-        wp_register_script('bpviewer',$bpscript,false,false,$this->jhbploadinfooter());
-        wp_enqueue_script('googlebookpreviewer',false,array(),false,$this->jhbploadinfooter());
-        wp_enqueue_script('bpviewer',false,array(),false,$this->jhbploadinfooter());
-        wp_enqueue_script('jquery-ui-dialog',false,array(),false,$this->jhbploadinfooter());
-        wp_enqueue_script('jquery-effects-core',false,array(),false,$this->jhbploadinfooter());
-        wp_enqueue_script('jquery-effects-blind',false,array(),false,$this->jhbploadinfooter());
-        wp_enqueue_script('jquery-effects-explode',false,array(),false,$this->jhbploadinfooter());
+            wp_register_script('googlebookpreviewer',$jhbpliburl,false,false,$this->jhbploadinfooter());
+            wp_register_script('bpviewer',$bpscript,false,false,$this->jhbploadinfooter());
+            wp_enqueue_script('googlebookpreviewer',false,array(),false,$this->jhbploadinfooter());
+            wp_enqueue_script('bpviewer',false,array(),false,$this->jhbploadinfooter());
+            wp_enqueue_script('jquery-ui-dialog',false,array(),false,$this->jhbploadinfooter());
+            wp_enqueue_script('jquery-effects-core',false,array(),false,$this->jhbploadinfooter());
+            wp_enqueue_script('jquery-effects-blind',false,array(),false,$this->jhbploadinfooter());
+            wp_enqueue_script('jquery-effects-explode',false,array(),false,$this->jhbploadinfooter());
+        }
     }
     
     public function jhbploadstyles()
@@ -410,7 +416,7 @@ class jhbookpreviewer
     
     public function getbpresponsive()
     {
-        $this->jhbpresponsive = get_option('bookpreviewer-responsive','1');
+        $this->jhbpresponsive = get_option('bookpreviewer-responsive','0');
         return absint($this->jhbpresponsive);
     }
     
