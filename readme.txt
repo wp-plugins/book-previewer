@@ -9,7 +9,7 @@ Author:            James R. Hanback, Jr.
 Donate link: 	   http://www.timetides.com
 Requires at least: 3.6
 Tested up to:      4.0
-Stable tag:        1.0.1
+Stable tag:        1.0.3
 License:           GPLv3
 
 Retrieve and display Google Books previews for an ISBN, OCLC, LCCN, or GGKEY you specify on any WordPress page or post.
