@@ -8,7 +8,7 @@ Author URI:        http://www.timetides.com
 Author:            James R. Hanback, Jr.
 Donate link: 	   http://www.timetides.com
 Requires at least: 3.6
-Tested up to:      4.0
+Tested up to:      4.1
 Stable tag:        1.0.3
 License:           GPLv3
 
