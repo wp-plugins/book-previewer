@@ -1,0 +1,315 @@
+# Copyright (C) 2014 Book Previewer
+# This file is distributed under the same license as the Book Previewer package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Book Previewer 1.0.3\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/book-previewer\n"
+"POT-Creation-Date: 2014-09-12 23:53:20+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: jhbpclasses.php:77 jhbpclasses.php:125
+msgid "Book Preview"
+msgstr ""
+
+#: jhbpclasses.php:78
+msgid "Displays a Google Books preview of a title you specify."
+msgstr ""
+
+#: jhbpclasses.php:177
+msgid "Title:"
+msgstr ""
+
+#: jhbpclasses.php:179
+msgid "ID Type:"
+msgstr ""
+
+#: jhbpclasses.php:186
+msgid "ID:"
+msgstr ""
+
+#: jhbpclasses.php:188
+msgid "Width (in pixels):"
+msgstr ""
+
+#: jhbpclasses.php:190
+msgid "Height (in pixels):"
+msgstr ""
+
+#: jhbpclasses.php:192
+msgid "Previewer:"
+msgstr ""
+
+#: jhbpclasses.php:198
+msgid "Language:"
+msgstr ""
+
+#: jhbpclasses.php:351
+msgid "Settings"
+msgstr ""
+
+#: jhbpclasses.php:425
+msgid "WARNING!"
+msgstr ""
+
+#: jhbpclasses.php:426
+msgid ""
+"You should make a backup of your WordPress database before attempting to use "
+"the <strong>Clear Cache</strong> option. The <strong>Clear Cache</strong> "
+"option attempts to delete data directly from the WordPress database and is "
+"therefore dangerous. Use the <strong>Clear Cache</strong> option with "
+"caution."
+msgstr ""
+
+#: jhbpclasses.php:434
+msgid "Shortcode"
+msgstr ""
+
+#: jhbpclasses.php:436
+msgid ""
+"Insert the above shortcode into any page or post where you want Google Books "
+"previews to appear. Replace "
+msgstr ""
+
+#: jhbpclasses.php:437
+msgid ""
+" with the product identifier to retrieve and display the preview for that "
+"product."
+msgstr ""
+
+#: jhbpclasses.php:438
+msgid ""
+"For a more detailed and complete overview of how Book Previewer works, click "
+"the \"Help\" tab on the upper right of the Book Previewer settings page."
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot (Book Previewer 1.0.3)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: jhbpclasses.php:488 jhbpclasses.php:638
+msgid "Book Previewer"
+msgstr ""
+
+#: jhbpclasses.php:495
+msgid "Usage"
+msgstr ""
+
+#: jhbpclasses.php:579
+msgid "Allow Book Previewer"
+msgstr ""
+
+#: jhbpclasses.php:584
+msgid ""
+"By selecting this checkbox, you agree to allow Book Previewer to display "
+"Google Books Previewer branding, previews, images, buttons, links, and text "
+"on your WordPress site. If you do not agree to these terms, you cannot use "
+"the Book Previewer plugin."
+msgstr ""
+
+#: jhbpclasses.php:590
+msgid "Use Responsive Style"
+msgstr ""
+
+#: jhbpclasses.php:595
+msgid ""
+"Uses a responsive container for the previewer rather than a fixed width."
+msgstr ""
+
+#: jhbpclasses.php:601
+msgid "Cache Expires In"
+msgstr ""
+
+#: jhbpclasses.php:606
+msgid ""
+"The number of hours that should pass before cached previewers expire. Cannot "
+"be more than 23 hours. Default is 12."
+msgstr ""
+
+#: jhbpclasses.php:612
+msgid "Defer Until Footer"
+msgstr ""
+
+#: jhbpclasses.php:617
+msgid ""
+"Loads Book Previewer data asynchronously for better site performance. See "
+"the Help menu for more information."
+msgstr ""
+
+#: jhbpclasses.php:623
+msgid "Clear Cache"
+msgstr ""
+
+#: jhbpclasses.php:628
+msgid "Clears Book Previewer transient data."
+msgstr ""
+
+#: jhbpclasses.php:640
+msgid ""
+"Book Previewer is a shortcode that retrieves and displays Google Books "
+"previews of titles you specify. To use the shortcode, you must have an "
+"International Standard Book Number (ISBN), Online Computer Library Center "
+"(OCLC) ID, Library of Congress Control Number (LCCN), or Google Play "
+"Generated Key (GGKEY) for the title you want to display."
+msgstr ""
+
+#: jhbpclasses.php:642
+msgid "The Book Previewer shortcode requires the following two parameters:"
+msgstr ""
+
+#: jhbpclasses.php:644
+msgid ""
+" the ISBN, OCLC, LCCN, or GGKEY of the title that has the Google Books "
+"preview you want to display."
+msgstr ""
+
+#: jhbpclasses.php:646
+msgid ""
+" the type of preview you want to display. There are three options that "
+"correspond to the three types of Google Books preview elements: "
+"<code>embedded</code>, <code>link</code>, and <code>popup</code>."
+msgstr ""
+
+#: jhbpclasses.php:648
+msgid ""
+"For example, the following shortcode displays a Google Preview button that, "
+"when clicked, will launch a popup Google Books preview of HOPPERS by Isaac "
+"Thorne:"
+msgstr ""
+
+#: jhbpclasses.php:653
+msgid "Book Previewer Options"
+msgstr ""
+
+#: jhbpclasses.php:655
+msgid ""
+"The Book Previewer shortcode supports all of the following optional "
+"parameters:"
+msgstr ""
+
+#: jhbpclasses.php:657
+msgid ""
+" accepts a value of <code>ISBN</code>, <code>OCLC</code>, <code>LCCN</code>, "
+"or <code>GGKEY</code>. If you do not specify an <code>idtype</code>, Google "
+"Books preview will search its database for book IDs of any type that match "
+"the <code>bookid</code> value you entered."
+msgstr ""
+
+#: jhbpclasses.php:659
+msgid ""
+" accepts an integer value in pixels to configure the width of the previewer. "
+"This parameter is only useful if <code>previewer</code> is configured to "
+"<code>embedded</code>."
+msgstr ""
+
+#: jhbpclasses.php:661
+msgid ""
+" accepts an integer value in pixels to configure the height of the "
+"previewer. This parameter is only useful if <code>previewer</code> is "
+"configured to <code>embedded</code>."
+msgstr ""
+
+#: jhbpclasses.php:663
+msgid ""
+" accepts a code to enable the Google Preview button to display text in a "
+"language other than English. The full list of codes is <a href=\"https://"
+"developers.google.com/books/docs/viewer/developers_guide#Localization\" "
+"target=\"_blank\">available here</a>."
+msgstr ""
+
+#: jhbpclasses.php:665
+msgid ""
+" accepts a string that identifies a publisher's Google Books cobrand. This "
+"parameter only works if you have established a cobrand with the Google Books "
+"partner program."
+msgstr ""
+
+#: jhbpclasses.php:667
+msgid ""
+"The Book Previewer shortcode can be issued by typing the shortcode in the "
+"Text window of the editor on any page or post. The Text window also contains "
+"a <strong>bookpreviewer</strong> button that you can use to automatically "
+"place the shortcode into the text frame."
+msgstr ""
+
+#: jhbpclasses.php:674
+msgid "Book Previewer Settings"
+msgstr ""
+
+#: jhbpclasses.php:676
+msgid ""
+"The Book Previewer plugin caches some information to your WordPress database "
+"if you do not have a caching plugin, such as W3 Total Cache, installed and "
+"activated. You can alter the following Book Previewer performance settings "
+"on this page:"
+msgstr ""
+
+#: jhbpclasses.php:678
+msgid ""
+" Configures the number of hours the WordPress database should store Book "
+"Previewer caches. Cannot be longer than 23 hours."
+msgstr ""
+
+#: jhbpclasses.php:680
+msgid ""
+" Uses a variable-width container for the previewer instead of a fixed-width "
+"container, which can improve the appearance of the previewer on responsive "
+"sites."
+msgstr ""
+
+#: jhbpclasses.php:682
+msgid ""
+" Loads all Book Previewer JavaScript and <code>link</code> tags in your "
+"WordPress site's footer, which can benefit site performance. Your WordPress "
+"theme must use the wp_footer function for this option to work."
+msgstr ""
+
+#: jhbpclasses.php:684
+msgid ""
+" If your site does not use a caching plugin, you can use this option to "
+"clear cached Book Previewer information from your WordPress database. Please "
+"be aware that if you are using a caching plugin, such as W3 Total Cache, "
+"with object caching enabled, the Clear Cache option will not do anything. "
+"You will need to clear the object cache by using the caching plugin's clear "
+"cache feature."
+msgstr ""
+
+#: jhbpclasses.php:694
+msgid "Cache cleared"
+msgstr ""
+
+#: jhbpclasses.php:729
+msgid "Book Previewer Error"
+msgstr ""
+
+#: jhbpclasses.php:730
+msgid " Previewer Type Not Recognized.<br><br>Valid entries are "
+msgstr ""
+
+#: jhbpclasses.php:732
+msgid "or"
+msgstr ""
+
+#: jhbpclasses.php:830
+msgid "Google Books Preview"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.timetides.com/book-previewer-plugin-wordpress"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Retrieves and displays Google Books previews for titles you choose in any "
+"WordPress page or post."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "James R. Hanback, Jr."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.timetides.com"
+msgstr ""
