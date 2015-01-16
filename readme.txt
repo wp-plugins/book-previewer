@@ -6,10 +6,10 @@ Plugin URI:        http://www.timetides.com/book-previewer-plugin-wordpress
 Tags:              books,google,previewer,previews,sample,free,inside
 Author URI:        http://www.timetides.com
 Author:            James R. Hanback, Jr.
-Donate link: 	   http://www.timetides.com
+Donate link: 	   http://www.timetides.com/donate
 Requires at least: 3.6
 Tested up to:      4.1
-Stable tag:        1.0.3
+Stable tag:        1.0.4
 License:           GPLv3
 
 Retrieve and display Google Books previews for an ISBN, OCLC, LCCN, or GGKEY you specify on any WordPress page or post.
@@ -106,6 +106,9 @@ There are three options in Book Previewer’s WordPress Settings that can be use
 
 == Upgrade Notice ==
 
+= 1.0.4 =
+Fixes a WP_DEBUG notice that could be displayed on WordPress content types that are not pages or posts.
+
 = 1.0.3 =
 Adds responsive setting to improve appearance of embedded previewer on responsive sites.
 
@@ -122,6 +125,11 @@ This is the first version of the plugin
 3. The plugin in action as a popup button
 
 == Changelog ==
+
+= 1.0.4 =
+* Fixed a WP_DEBUG notice that could be displayed on WordPress content types that are not pages or posts
+* Added a Donate link to the plugin page
+* Updated POT file
 
 = 1.0.3 =
 

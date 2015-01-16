@@ -3,9 +3,9 @@
  * Plugin Name: Book Previewer
  * Plugin URI: http://www.timetides.com/book-previewer-plugin-wordpress
  * Description: Retrieves and displays Google Books previews for titles you choose in any WordPress page or post.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: James R. Hanback, Jr.
- * Author URI: http://www.timetides.com
+ * Author URI: http://www.timetides.com/donate
  * License: GPL3
  * Text Domain: bookpreviewer
  * Domain Path: /lang/
@@ -45,6 +45,7 @@ if (is_admin()) {
     add_action('admin_menu', array(&$jhbpobj, 'jhbpaddadminpage'));
     add_action('admin_notices', array(&$jhbpobj, 'jhbpshownotices'));
     add_filter("plugin_action_links_$jhbpplugin", array(&$jhbpobj, 'jhbpoptionslink'));
+    add_filter('plugin_row_meta', array(&$jhbpobj,'jhbpdonatelink'), 10, 2);
 }
 
 $jhbpobj->jhbpaddactions();

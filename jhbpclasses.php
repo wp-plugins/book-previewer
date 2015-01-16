@@ -285,7 +285,37 @@ class jhbookpreviewer
     
     // Google Books branding button
     public $jhbppbutton = "/googlebooks/images/gbs_preview_button1.png";
-    
+   
+    public function jhbpdonatelink($links,$file)
+    {
+        // Code based on codex.wordpress.org/Plugin_API/Filter_Reference/plugin_row_meta
+        if(strpos($file, 'book-previewer.php') !== false)
+        {
+            $jhbpdonatelinks = array(
+                               '<a href="http://www.timetides.com/donate" target="_blank">Donate</a>'
+                               );
+            $links = array_merge($links, $jhbpdonatelinks);
+        }
+        return $links;
+    }
+     
+    public function jhbpgetpagetype()
+    {
+        global $post;
+        $jhbpgoodpage = FALSE;
+        
+        if(is_home() || is_front_page() || is_active_widget( false, false, 'jhbp_widget', true)) {
+            $jhbpgoodpage = TRUE;
+        } elseif (is_single() || is_page()) {
+            if(has_shortcode($post->post_content,'bookpreviewer'))
+            {
+                $jhbpgoodpage = TRUE;
+            }
+        }
+        
+        return $jhbpgoodpage;
+    }
+
     public function jhbploadlocal()
     {
         load_plugin_textdomain('bookpreviewer',false,basename(dirname(__FILE__)).'/lang');
@@ -299,22 +329,21 @@ class jhbookpreviewer
  
     public function jhbploadscripts()
     {   
-        global $post;
         // Load scripts/stylesheet if required and if shortcode is present
         // below code does NOT work with do_shortcode and requires WP 3.6 or later
-        if(has_shortcode($post->post_content,'bookpreviewer') || is_home() || is_front_page() || is_active_widget( false, false, 'jhbp_widget', true ))
+        if($this->jhbpgetpagetype())
         {
-            $jhbpliburl = '//www.google.com/jsapi';
-            $bpscript = plugins_url('/js/book-previewer.js', __FILE__);
+                $jhbpliburl = '//www.google.com/jsapi';
+                $bpscript = plugins_url('/js/book-previewer.js', __FILE__);
         
-            wp_register_script('googlebookpreviewer',$jhbpliburl,false,false,$this->jhbploadinfooter());
-            wp_register_script('bpviewer',$bpscript,false,false,$this->jhbploadinfooter());
-            wp_enqueue_script('googlebookpreviewer',false,array(),false,$this->jhbploadinfooter());
-            wp_enqueue_script('bpviewer',false,array(),false,$this->jhbploadinfooter());
-            wp_enqueue_script('jquery-ui-dialog',false,array(),false,$this->jhbploadinfooter());
-            wp_enqueue_script('jquery-effects-core',false,array(),false,$this->jhbploadinfooter());
-            wp_enqueue_script('jquery-effects-blind',false,array(),false,$this->jhbploadinfooter());
-            wp_enqueue_script('jquery-effects-explode',false,array(),false,$this->jhbploadinfooter());
+                wp_register_script('googlebookpreviewer',$jhbpliburl,false,false,$this->jhbploadinfooter());
+                wp_register_script('bpviewer',$bpscript,false,false,$this->jhbploadinfooter());
+                wp_enqueue_script('googlebookpreviewer',false,array(),false,$this->jhbploadinfooter());
+                wp_enqueue_script('bpviewer',false,array(),false,$this->jhbploadinfooter());
+                wp_enqueue_script('jquery-ui-dialog',false,array(),false,$this->jhbploadinfooter());
+                wp_enqueue_script('jquery-effects-core',false,array(),false,$this->jhbploadinfooter());
+                wp_enqueue_script('jquery-effects-blind',false,array(),false,$this->jhbploadinfooter());
+                wp_enqueue_script('jquery-effects-explode',false,array(),false,$this->jhbploadinfooter());
         }
     }
     
