@@ -358,7 +358,7 @@ class jhbookpreviewer
         {
         ?>
             <script type="text/javascript">
-            QTags.addButton('eg_bookpreviewer','bookpreviewer','[bookpreviewer idtype="ISBN" bookid="" previewer="popup"]','','bookpreviewer','Book Previewer Shortcode');
+            QTags.addButton('eg_bookpreviewer','BPr','[bookpreviewer idtype="ISBN" bookid="" previewer="popup"]','','bookpreviewer','Book Previewer Shortcode');
             </script>
         <?php
         }
@@ -872,7 +872,7 @@ class jhbookpreviewer
         $jhbpoutput  = '';
         $jhbphost    = (isset($jhbpatts["cobrand"])) ? 'books.google.com/books/' . sanitize_text_field($jhbpatts["cobrand"]) . '?vid=' : 'books.google.com/books?vid=';
         $jhbpoutput .= '<a href="' . $this->jhbpisSSL() . $jhbphost . $this->jhbplinkidentifier($jhbpatts) .'&printsec=frontcover">';
-        $jhbpoutput .= '<img src="' . $this->jhbpshowbutton($jhbpatts) . '" /></a>';
+        $jhbpoutput .= '<img src="' . $this->jhbpshowbutton($jhbpatts) . '" width="88" height="31"/></a>';
         return $jhbpoutput;
     }
     

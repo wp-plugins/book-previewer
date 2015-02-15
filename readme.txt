@@ -9,7 +9,7 @@ Author:            James R. Hanback, Jr.
 Donate link: 	   http://www.timetides.com/donate
 Requires at least: 3.6
 Tested up to:      4.1
-Stable tag:        1.0.4
+Stable tag:        1.0.5
 License:           GPLv3
 
 Retrieve and display Google Books previews for an ISBN, OCLC, LCCN, or GGKEY you specify on any WordPress page or post.
@@ -106,6 +106,9 @@ There are three options in Book Previewer’s WordPress Settings that can be use
 
 == Upgrade Notice ==
 
+= 1.0.5 =
+Adds image width and height parameters for Google Previewer button to improve Page Speed scores.
+
 = 1.0.4 =
 Fixes a WP_DEBUG notice that could be displayed on WordPress content types that are not pages or posts.
 
@@ -126,6 +129,10 @@ This is the first version of the plugin
 
 == Changelog ==
 
+= 1.0.5 =
+* Added image width and height parameters for Google Previewer button to improve Page Speed scores
+* Changed `bookpreviewer` button in WordPress text editor to the shorter `BPr`
+
 = 1.0.4 =
 * Fixed a WP_DEBUG notice that could be displayed on WordPress content types that are not pages or posts
 * Added a Donate link to the plugin page
@@ -134,13 +141,13 @@ This is the first version of the plugin
 = 1.0.3 =
 
 * Added responsive setting to improve appearance of embedded previewer on responsive sites.
-* Modified script loading so that scripts are loaded only on the home page or any page/post that contains the bookpreviewer shortcode.
-* Updated minimum WordPress version to 3.6.
+* Modified script loading so that scripts are loaded only on the home page or any page/post that contains the bookpreviewer shortcode
+* Updated minimum WordPress version to 3.6
 
 = 1.0.1 =
 
-* Fixed an issue with the popup button that could cause unwanted parent page scrolling.
-* Fixed a lower margin issue with the embedded viewer that could cause it to overlap with elements that follow it on a page.
+* Fixed an issue with the popup button that could cause unwanted parent page scrolling
+* Fixed a lower margin issue with the embedded viewer that could cause it to overlap with elements that follow it on a page.]
 
 = 1.0 =
 
