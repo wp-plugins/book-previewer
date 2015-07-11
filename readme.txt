@@ -8,8 +8,8 @@ Author URI:        http://www.timetides.com
 Author:            James R. Hanback, Jr.
 Donate link: 	   http://www.timetides.com/donate
 Requires at least: 3.6
-Tested up to:      4.2
-Stable tag:        1.0.5
+Tested up to:      4.3
+Stable tag:        1.0.6
 License:           GPLv3
 
 Retrieve and display Google Books previews for an ISBN, OCLC, LCCN, or GGKEY you specify on any WordPress page or post.
@@ -106,6 +106,9 @@ There are three options in Book Previewer’s WordPress Settings that can be use
 
 == Upgrade Notice ==
 
+= 1.0.6 =
+Enhances security by hardening URL sanitization.
+
 = 1.0.5 =
 Adds image width and height parameters for Google Previewer button to improve Page Speed scores.
 
@@ -128,6 +131,9 @@ This is the first version of the plugin
 3. The plugin in action as a popup button
 
 == Changelog ==
+
+= 1.0.6 =
+* Enhanced security by hardening URL sanitization.
 
 = 1.0.5 =
 * Added image width and height parameters for Google Previewer button to improve Page Speed scores

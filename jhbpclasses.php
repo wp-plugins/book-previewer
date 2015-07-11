@@ -333,8 +333,8 @@ class jhbookpreviewer
         // below code does NOT work with do_shortcode and requires WP 3.6 or later
         if($this->jhbpgetpagetype())
         {
-                $jhbpliburl = '//www.google.com/jsapi';
-                $bpscript = plugins_url('/js/book-previewer.js', __FILE__);
+                $jhbpliburl = esc_url('//www.google.com/jsapi');
+                $bpscript = esc_url(plugins_url('/js/book-previewer.js', __FILE__));
         
                 wp_register_script('googlebookpreviewer',$jhbpliburl,false,false,$this->jhbploadinfooter());
                 wp_register_script('bpviewer',$bpscript,false,false,$this->jhbploadinfooter());
@@ -377,7 +377,7 @@ class jhbookpreviewer
 
     public function jhbpoptionslink($jhbplink) 
     {
-        $jhbpSettingsLink  = '<a href="' . admin_url() . 'admin.php?page=bookpreviewer-options">' . __('Settings','bookpreviewer') . '</a>';
+        $jhbpSettingsLink  = '<a href="' . esc_url(admin_url()) . 'admin.php?page=bookpreviewer-options">' . __('Settings','bookpreviewer') . '</a>';
         array_unshift($jhbplink,$jhbpSettingsLink);
         return $jhbplink;
     }
@@ -505,9 +505,9 @@ class jhbookpreviewer
         if( isset( $_GET[ 'tab' ] ) ) {
             $active_tab = isset( $_GET[ 'tab' ] ) ? sanitize_text_field($_GET[ 'tab' ]) : 'bookpreviewer_retrieval_section';
         }
-        echo '<h2 class="nav-tab-wrapper"><a href="' . admin_url() .'admin.php?page=bookpreviewer-options&tab=bookpreviewer_retrieval_section" class="nav-tab ';
+        echo '<h2 class="nav-tab-wrapper"><a href="' . esc_url(admin_url()) .'admin.php?page=bookpreviewer-options&tab=bookpreviewer_retrieval_section" class="nav-tab ';
         echo $active_tab == 'bookpreviewer_retrieval_section' ? 'nav-tab-active' : '';
-        echo '">Book Previewer</a><a href="' . admin_url() .'admin.php?page=bookpreviewer-usages&tab=bookpreviewer_usage_section" class="nav-tab ';
+        echo '">Book Previewer</a><a href="' . esc_url(admin_url()) .'admin.php?page=bookpreviewer-usages&tab=bookpreviewer_usage_section" class="nav-tab ';
         echo $active_tab == 'bookpreviewer_usage_section' ? 'nav-tab-active' : '';
         echo '">Usage</a></h2>';
         
@@ -871,8 +871,8 @@ class jhbookpreviewer
     {
         $jhbpoutput  = '';
         $jhbphost    = (isset($jhbpatts["cobrand"])) ? 'books.google.com/books/' . sanitize_text_field($jhbpatts["cobrand"]) . '?vid=' : 'books.google.com/books?vid=';
-        $jhbpoutput .= '<a href="' . $this->jhbpisSSL() . $jhbphost . $this->jhbplinkidentifier($jhbpatts) .'&printsec=frontcover">';
-        $jhbpoutput .= '<img src="' . $this->jhbpshowbutton($jhbpatts) . '" width="88" height="31"/></a>';
+        $jhbpoutput .= '<a href="' . esc_url($this->jhbpisSSL() . $jhbphost . $this->jhbplinkidentifier($jhbpatts)) . '&printsec=frontcover">';
+        $jhbpoutput .= '<img src="' . esc_url($this->jhbpshowbutton($jhbpatts)) . '" alt="Google Previewer" width="88" height="31" /></a>';
         return $jhbpoutput;
     }
     
@@ -908,7 +908,7 @@ class jhbookpreviewer
                     } else {
                         $jhbpoutput .= $this->jhbppopup();
                     }
-                    $jhbpoutput .= '<a href="#" onClick="return false;" id="gbppop"><img src="' . $this->jhbpshowbutton($jhbpatts) . '" /></a>';
+                    $jhbpoutput .= '<a href="#" onClick="return false;" id="gbppop"><img src="' . $this->jhbpshowbutton($jhbpatts) . '" alt="Google Previewer" width="88" height="31" /></a>';
                     $jhbpoutput .= $this->jhbpcontainer($jhbpatts);
                     break;
             default:
